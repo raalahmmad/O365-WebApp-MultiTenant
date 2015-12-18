@@ -34,6 +34,7 @@ namespace O365_WebApp_MultiTenant.Controllers
             if (!Request.IsAuthenticated)
             {
                 HttpContext.GetOwinContext().Authentication.Challenge(new AuthenticationProperties { RedirectUri = "/" }, OpenIdConnectAuthenticationDefaults.AuthenticationType);
+            
             }
         }
         public void SignOut()
